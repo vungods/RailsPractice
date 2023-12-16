@@ -1,0 +1,12 @@
+// new.html.slim for sessions (Đăng nhập)
+- content_for :title, "Đăng Nhập"
+.form-container
+  h2 Đăng Nhập
+  = form_with url: login_path do |f|
+    = f.label :email
+    = f.email_field :email
+
+    = f.label :password
+    = f.password_field :password
+
+    = f.submit "Đăng nhập"

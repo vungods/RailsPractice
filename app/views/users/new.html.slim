@@ -1,0 +1,15 @@
+
+- content_for :title, "Đăng Ký"
+.form-container
+  h2 Đăng Ký
+  = form_with model: @user, url: signup_path, local: true do |f|
+    = f.label :email
+    = f.email_field :email
+
+    = f.label :password
+    = f.password_field :password
+
+    = f.label :password_confirmation, "Xác nhận mật khẩu"
+    = f.password_field :password_confirmation
+
+    = f.submit "Đăng ký"
